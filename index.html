@@ -104,8 +104,18 @@
 
     <script>
         function launchGame() {
-            // Ciche uruchomienie pliku w tle bez pokazywania nazwy w strukturze okna
-            window.location.href = "indev.html";
+            // Wymiary okna gry i wyśrodkowanie go na ekranie
+            const width = 800;
+            const height = 600;
+            const left = (window.screen.width / 2) - (width / 2);
+            const top = (window.screen.height / 2) - (height / 2);
+
+            // Otwarcie pliku jako czysty popup systemu operacyjnego
+            window.open(
+                "indev.html", 
+                "MinecraftIndev", 
+                `popup=yes,width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=no`
+            );
         }
     </script>
 
